@@ -24,7 +24,7 @@ body{
     background:#f6f8fc;
     color:#172033;
     line-height:1.8;
-    padding-bottom:135px;
+    padding-bottom:145px;
 }
 
 .container{
@@ -180,7 +180,7 @@ h1{
     color:#166534;
 }
 
-/* INCOME BANNER */
+/* INCOME */
 
 .income-banner{
     max-width:900px;
@@ -208,20 +208,50 @@ h1{
     padding:15px;
     border-radius:20px;
     box-shadow:0 8px 30px rgba(15,40,80,.10);
-    max-width:850px;
+    max-width:900px;
     margin:auto;
 }
 
-.drive-video{
+/* المحاضرة العرضية */
+
+.youtube-horizontal{
     position:relative;
     width:100%;
-    padding-top:56.25%;
+    aspect-ratio:16 / 9;
     overflow:hidden;
     border-radius:14px;
     background:#000;
 }
 
-.drive-video iframe{
+.youtube-horizontal iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* فيديو آراء العملاء الطولي */
+
+.vertical-video-box{
+    max-width:430px;
+    margin:auto;
+    background:white;
+    padding:12px;
+    border-radius:22px;
+    box-shadow:0 8px 30px rgba(15,40,80,.10);
+}
+
+.youtube-vertical{
+    position:relative;
+    width:100%;
+    aspect-ratio:9 / 16;
+    overflow:hidden;
+    border-radius:16px;
+    background:#000;
+}
+
+.youtube-vertical iframe{
     position:absolute;
     inset:0;
     width:100%;
@@ -300,8 +330,6 @@ details p{
     text-align:center;
 }
 
-/* FOOTER */
-
 footer{
     background:#06152f;
     color:#dce6f6;
@@ -345,10 +373,6 @@ footer{
     font-weight:900;
 }
 
-.sticky-price{
-    color:white;
-}
-
 .sticky-price strong{
     color:#ffd54f;
     font-size:22px;
@@ -356,7 +380,6 @@ footer{
 
 .sticky-price del{
     color:#ddd;
-    margin-right:4px;
 }
 
 .sticky-instruction{
@@ -376,8 +399,6 @@ footer{
     font-weight:bold;
     padding:13px 22px;
     border-radius:13px;
-    font-size:16px;
-    box-shadow:0 5px 18px rgba(37,211,102,.3);
 }
 
 /* MOBILE */
@@ -385,7 +406,7 @@ footer{
 @media(max-width:750px){
 
     body{
-        padding-bottom:175px;
+        padding-bottom:180px;
     }
 
     section{
@@ -397,9 +418,28 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .video-box{
+        width:100%;
+        padding:8px;
+    }
+
+    .youtube-horizontal{
+        width:100%;
+        aspect-ratio:16 / 9;
+    }
+
+    .vertical-video-box{
+        width:min(88%,400px);
+        padding:8px;
+    }
+
+    .youtube-vertical{
+        aspect-ratio:9 / 16;
+    }
+
     .sticky-inner{
         flex-direction:column;
-        gap:7px;
+        gap:6px;
     }
 
     .sticky-message{
@@ -423,10 +463,6 @@ footer{
         max-width:340px;
         text-align:center;
         padding:10px 15px;
-    }
-
-    .hero{
-        padding-top:40px;
     }
 }
 </style>
@@ -473,9 +509,7 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 
 <section class="hero-image">
 <div class="container">
-
 <img src="hero.jpg" alt="كورس مدرب الحساب الذهني">
-
 </div>
 </section>
 
@@ -495,32 +529,27 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 <div class="card">
 <div class="card-icon">🏠</div>
 <h3>ادرس من البيت</h3>
-<p>
-المحاضرات مسجلة وتقدر تتعلم في الوقت والمكان المناسبين ليك.
-</p>
+<p>المحاضرات مسجلة وتقدر تتعلم في الوقت والمكان المناسبين ليك.</p>
 </div>
 
 <div class="card">
 <div class="card-icon">🎥</div>
 <h3>10 محاضرات كاملة</h3>
-<p>
-تدريب يبدأ معاك من الأساسيات وصولًا للعمليات المتقدمة والتطبيق.
-</p>
+<p>تدريب يبدأ معاك من الأساسيات وصولًا للعمليات المتقدمة والتطبيق.</p>
 </div>
 
 <div class="card">
 <div class="card-icon">📞</div>
 <h3>دعم أثناء التطبيق</h3>
-<p>
-تقدر تتواصل وتسأل عن أي نقطة تحتاج توضيحها أثناء رحلة التعلم.
-</p>
+<p>تقدر تتواصل وتسأل عن أي نقطة تحتاج توضيحها أثناء رحلة التعلم.</p>
 </div>
 
 <div class="card money-card">
 <div class="card-icon">💰</div>
 <h3>ابدأ شغلك ووسّع دخلك</h3>
 <p>
-هتتعلم إزاي تسوق لنفسك، وتكوّن أول مجموعاتك، وتحول مهارتك إلى مصدر دخل قوي.
+هتتعلم إزاي تسوق لنفسك، وتكوّن أول مجموعاتك،
+وتحول مهارتك إلى مصدر دخل قوي.
 </p>
 </div>
 
@@ -542,16 +571,17 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 
 </div>
 
+
 <div class="income-banner">
+
 <div class="money">💰</div>
 
-<h3>
-حوّل مهارتك لمصدر دخل قوي
-</h3>
+<h3>حوّل مهارتك لمصدر دخل قوي</h3>
 
 <p>
-ومع بناء مجموعاتك والتسويق الجيد لنفسك، المجال يفتح لك فرصة لزيادة دخلك
-والوصول لنتائج قد تتجاوز دخل الدروس الخصوصية.
+ومع بناء مجموعاتك والتسويق الجيد لنفسك،
+المجال يفتح لك فرصة لزيادة دخلك والوصول لنتائج
+قد تتجاوز دخل الدروس الخصوصية.
 </p>
 
 </div>
@@ -559,6 +589,8 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 </div>
 </section>
 
+
+<!-- المحاضرة التجريبية -->
 
 <section id="trial" style="background:#eef3fa;">
 <div class="container">
@@ -574,19 +606,22 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 
 </div>
 
+
 <div class="video-box">
 
-<div class="drive-video">
+<div class="youtube-horizontal">
 
 <iframe
-src="https://drive.google.com/file/d/17X0TXtEsJTAfZHYA29hIqbidTujQ4vUi/preview"
-allow="autoplay"
+src="https://www.youtube.com/embed/LGZkjCINQBg?rel=0&playsinline=1"
+title="المحاضرة التجريبية"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
 </iframe>
 
 </div>
 
 </div>
+
 
 <br>
 
@@ -603,6 +638,8 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 </section>
 
 
+<!-- آراء العملاء -->
+
 <section>
 <div class="container">
 
@@ -611,27 +648,30 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 <h2>⭐ شوف تجارب ناس سبقوك</h2>
 
 <p>
-حابب أوريك تجارب ناس كانوا مترددين في البداية،
+حابب أوريك تجارب ناس سبقوك،
 وبعد التدريب بدأوا يطبقوا ويحققوا نتائج من المجال.
 <br>
-ودي آراء بعض المتدربين السابقين بنفسهم ❤️
+ودي آراء بعض المتدربين السابقين ❤️
 </p>
 
 </div>
 
-<div class="video-box">
 
-<div class="drive-video">
+<div class="vertical-video-box">
+
+<div class="youtube-vertical">
 
 <iframe
-src="https://drive.google.com/file/d/17umx2YTJtiCzcosHchJ8YEv98eK3-4sm/preview"
-allow="autoplay"
+src="https://www.youtube.com/embed/aqQc98aH_Es?rel=0&playsinline=1"
+title="آراء المتدربين"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
 </iframe>
 
 </div>
 
 </div>
+
 
 <br>
 
@@ -647,6 +687,8 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 </div>
 </section>
 
+
+<!-- محتوى البرنامج -->
 
 <section style="background:#eef3fa;">
 <div class="container">
@@ -689,6 +731,8 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 </section>
 
 
+<!-- العرض -->
+
 <section class="offer">
 <div class="container">
 
@@ -703,22 +747,21 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 </div>
 
 <p style="margin:15px auto 25px;max-width:650px;">
-
 مش لازم تبدأ الكورس فور الاشتراك.
-تقدر تستفيد بالسعر الحالي وتبدأ مشاهدة المحاضرات في الوقت المناسب ليك.
-
+تقدر تستفيد بالسعر الحالي وتبدأ مشاهدة المحاضرات
+في الوقت المناسب ليك.
 </p>
 
 <a class="whatsapp-btn"
 href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
-
 💬 احجز اشتراكك الآن
-
 </a>
 
 </div>
 </section>
 
+
+<!-- الأسئلة الشائعة -->
 
 <section>
 <div class="container">
@@ -736,44 +779,48 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 </p>
 </details>
 
+
 <details>
 <summary>هل الكورس مباشر ولا مسجل؟</summary>
 
 <p>
-الكورس عبارة عن محاضرات مسجلة، وبالتالي تقدر تشوفها في أي وقت مناسب ليك.
+الكورس عبارة عن محاضرات مسجلة، وبالتالي تقدر تشوفها
+في أي وقت مناسب ليك.
 
-وكمان تقدر تتواصل مع المدرب في أي وقت أثناء أو بعد الكورس عن طريق زر التواصل مع المدرب، وبكده مش هتحتاج ترتبط بوقت أو مكان معين علشان تبدأ.
+وكمان تقدر تتواصل مع المدرب في أي وقت أثناء أو بعد الكورس،
+وبكده مش هتحتاج ترتبط بوقت أو مكان معين علشان تبدأ.
 </p>
 
 </details>
 
+
 <details>
 <summary>هل أقدر أرجع للمحاضرات بعد ما أشوفها؟</summary>
-
 <p>
 نعم، تقدر ترجع للمحتوى والمحاضرات وقت ما تحتاج.
 </p>
 </details>
 
+
 <details>
 <summary>هل يوجد دعم أثناء التدريب؟</summary>
-
 <p>
 نعم، تقدر تتواصل وتسأل عن أي استفسار أثناء التعلم والتطبيق.
 </p>
 </details>
 
+
 <details>
 <summary>هل لازم أبدأ فور الاشتراك؟</summary>
-
 <p>
-لا. تقدر تستفيد بالعرض الحالي، وبعد الاشتراك تبدأ في الوقت المناسب ليك لأن المحاضرات مسجلة.
+لا. تقدر تستفيد بالعرض الحالي،
+وبعد الاشتراك تبدأ في الوقت المناسب ليك لأن المحاضرات مسجلة.
 </p>
 </details>
 
+
 <details>
 <summary>ما سعر الكورس الحالي؟</summary>
-
 <p>
 السعر الحالي 750 جنيه بدل 1800 جنيه.
 </p>
@@ -793,16 +840,15 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 <h2>جاهز تبدأ رحلتك؟ ❤️</h2>
 
 <p>
-لو حابب تبدأ أو عندك أي استفسار، تواصل معانا مباشرة على واتساب.
+لو حابب تبدأ أو عندك أي استفسار،
+تواصل معانا مباشرة على واتساب.
 </p>
 
 </div>
 
 <a class="whatsapp-btn"
 href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
-
 💬 تواصل معنا على واتساب
-
 </a>
 
 </div>
@@ -810,11 +856,9 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 
 
 <footer>
-
 الأكاديمية المصرية للحساب الذهني
 <br>
 جميع الحقوق محفوظة
-
 </footer>
 
 
@@ -846,9 +890,7 @@ href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 
 <a class="sticky-whatsapp"
 href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
-
 💬 واتساب للاشتراك
-
 </a>
 
 </div>
