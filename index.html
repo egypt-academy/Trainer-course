@@ -24,7 +24,7 @@ body{
     background:#f6f8fc;
     color:#172033;
     line-height:1.8;
-    padding-bottom:105px;
+    padding-bottom:135px;
 }
 
 .container{
@@ -309,7 +309,7 @@ footer{
     padding:30px 15px;
 }
 
-/* FIXED OFFER BAR */
+/* FIXED BAR */
 
 .sticky-bar{
     position:fixed;
@@ -318,8 +318,8 @@ footer{
     right:0;
     z-index:9999;
     background:linear-gradient(90deg,#061631,#102f62);
-    box-shadow:0 -5px 25px rgba(0,0,0,.25);
-    padding:9px 15px;
+    box-shadow:0 -5px 25px rgba(0,0,0,.28);
+    padding:10px 15px;
 }
 
 .sticky-inner{
@@ -328,25 +328,44 @@ footer{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:20px;
+    gap:22px;
 }
 
 .sticky-message{
     color:white;
     text-align:center;
-    font-size:18px;
+    font-size:17px;
     font-weight:bold;
-    line-height:1.4;
+    line-height:1.45;
 }
 
-.sticky-message strong{
+.sticky-alert{
     color:#ffd54f;
-    font-size:21px;
+    font-size:20px;
+    font-weight:900;
 }
 
-.sticky-message del{
+.sticky-price{
+    color:white;
+}
+
+.sticky-price strong{
+    color:#ffd54f;
+    font-size:22px;
+}
+
+.sticky-price del{
     color:#ddd;
-    margin-right:5px;
+    margin-right:4px;
+}
+
+.sticky-instruction{
+    font-size:14px;
+    color:#eef4ff;
+}
+
+.sticky-instruction b{
+    color:#ffd54f;
 }
 
 .sticky-whatsapp{
@@ -355,9 +374,10 @@ footer{
     color:white;
     text-decoration:none;
     font-weight:bold;
-    padding:12px 21px;
+    padding:13px 22px;
     border-radius:13px;
     font-size:16px;
+    box-shadow:0 5px 18px rgba(37,211,102,.3);
 }
 
 /* MOBILE */
@@ -365,7 +385,7 @@ footer{
 @media(max-width:750px){
 
     body{
-        padding-bottom:150px;
+        padding-bottom:175px;
     }
 
     section{
@@ -379,22 +399,30 @@ footer{
 
     .sticky-inner{
         flex-direction:column;
-        gap:6px;
+        gap:7px;
     }
 
     .sticky-message{
         font-size:14px;
     }
 
-    .sticky-message strong{
+    .sticky-alert{
         font-size:17px;
+    }
+
+    .sticky-price strong{
+        font-size:18px;
+    }
+
+    .sticky-instruction{
+        font-size:12px;
     }
 
     .sticky-whatsapp{
         width:100%;
-        max-width:330px;
+        max-width:340px;
         text-align:center;
-        padding:9px 15px;
+        padding:10px 15px;
     }
 
     .hero{
@@ -430,7 +458,7 @@ footer{
 <div class="buttons">
 
 <a class="whatsapp-btn"
-href="https://wa.me/201272796287?text=أرغب%20في%20الاشتراك%20في%20كورس%20مدرب%20الحساب%20الذهني">
+href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 💬 تواصل واتساب للاشتراك
 </a>
 
@@ -515,7 +543,6 @@ href="https://wa.me/201272796287?text=أرغب%20في%20الاشتراك%20في%
 </div>
 
 <div class="income-banner">
-
 <div class="money">💰</div>
 
 <h3>
@@ -566,7 +593,7 @@ allowfullscreen>
 <div class="center">
 
 <a class="whatsapp-btn"
-href="https://wa.me/201272796287?text=شاهدت%20المحاضرة%20التجريبية%20وأرغب%20في%20معرفة%20طريقة%20الاشتراك">
+href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 ❤️ أعجبتني المحاضرة — أريد الاشتراك
 </a>
 
@@ -611,7 +638,7 @@ allowfullscreen>
 <div class="center">
 
 <a class="whatsapp-btn"
-href="https://wa.me/201272796287?text=شاهدت%20آراء%20المتدربين%20وأرغب%20في%20الاشتراك">
+href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 💬 أعرف طريقة الاشتراك
 </a>
 
@@ -637,17 +664,11 @@ href="https://wa.me/201272796287?text=شاهدت%20آراء%20المتدربين
 <div class="lessons">
 
 <div class="lesson">1️⃣ الجمع والطرح البسيط</div>
-
 <div class="lesson">2️⃣ أصدقاء الـ5</div>
-
 <div class="lesson">3️⃣ أصدقاء الـ10</div>
-
 <div class="lesson">4️⃣ الجمع والطرح حتى الملايين</div>
-
 <div class="lesson">5️⃣ الضرب البسيط</div>
-
 <div class="lesson">6️⃣ الضرب المركب</div>
-
 <div class="lesson">7️⃣ القسمة</div>
 
 <div class="lesson">
@@ -689,7 +710,7 @@ href="https://wa.me/201272796287?text=شاهدت%20آراء%20المتدربين
 </p>
 
 <a class="whatsapp-btn"
-href="https://wa.me/201272796287?text=أرغب%20في%20حجز%20كورس%20مدرب%20الحساب%20الذهني%20بسعر%20750%20جنيه">
+href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 
 💬 احجز اشتراكك الآن
 
@@ -709,23 +730,14 @@ href="https://wa.me/201272796287?text=أرغب%20في%20حجز%20كورس%20مد
 <div class="faq">
 
 <details>
-
-<summary>
-هل لازم يكون عندي خبرة سابقة؟
-</summary>
-
+<summary>هل لازم يكون عندي خبرة سابقة؟</summary>
 <p>
 لا، البرنامج يبدأ من الأساسيات ومناسب للمبتدئين.
 </p>
-
 </details>
 
-
 <details>
-
-<summary>
-هل الكورس مباشر ولا مسجل؟
-</summary>
+<summary>هل الكورس مباشر ولا مسجل؟</summary>
 
 <p>
 الكورس عبارة عن محاضرات مسجلة، وبالتالي تقدر تشوفها في أي وقت مناسب ليك.
@@ -735,56 +747,36 @@ href="https://wa.me/201272796287?text=أرغب%20في%20حجز%20كورس%20مد
 
 </details>
 
-
 <details>
-
-<summary>
-هل أقدر أرجع للمحاضرات بعد ما أشوفها؟
-</summary>
+<summary>هل أقدر أرجع للمحاضرات بعد ما أشوفها؟</summary>
 
 <p>
 نعم، تقدر ترجع للمحتوى والمحاضرات وقت ما تحتاج.
 </p>
-
 </details>
 
-
 <details>
-
-<summary>
-هل يوجد دعم أثناء التدريب؟
-</summary>
+<summary>هل يوجد دعم أثناء التدريب؟</summary>
 
 <p>
 نعم، تقدر تتواصل وتسأل عن أي استفسار أثناء التعلم والتطبيق.
 </p>
-
 </details>
 
-
 <details>
-
-<summary>
-هل لازم أبدأ فور الاشتراك؟
-</summary>
+<summary>هل لازم أبدأ فور الاشتراك؟</summary>
 
 <p>
 لا. تقدر تستفيد بالعرض الحالي، وبعد الاشتراك تبدأ في الوقت المناسب ليك لأن المحاضرات مسجلة.
 </p>
-
 </details>
 
-
 <details>
-
-<summary>
-ما سعر الكورس الحالي؟
-</summary>
+<summary>ما سعر الكورس الحالي؟</summary>
 
 <p>
 السعر الحالي 750 جنيه بدل 1800 جنيه.
 </p>
-
 </details>
 
 </div>
@@ -807,7 +799,7 @@ href="https://wa.me/201272796287?text=أرغب%20في%20حجز%20كورس%20مد
 </div>
 
 <a class="whatsapp-btn"
-href="https://wa.me/201272796287?text=أرغب%20في%20معرفة%20تفاصيل%20الاشتراك%20في%20كورس%20مدرب%20الحساب%20الذهني">
+href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 
 💬 تواصل معنا على واتساب
 
@@ -826,25 +818,34 @@ href="https://wa.me/201272796287?text=أرغب%20في%20معرفة%20تفاصي�
 </footer>
 
 
+<!-- FIXED BAR -->
+
 <div class="sticky-bar">
 
 <div class="sticky-inner">
 
 <div class="sticky-message">
 
-🔥 احصل على العرض قبل الانتهاء
-<br>
+<div class="sticky-alert">
+🔥 العرض الحالي أوشك على الانتهاء!
+</div>
 
+<div class="sticky-price">
 <strong>750 جنيه فقط</strong>
-
 بدلًا من
-
 <del>1800 جنيه</del>
+</div>
+
+<div class="sticky-instruction">
+تواصل معنا على واتساب واكتب:
+<b>الاشتراك في الكورس</b>
+</div>
 
 </div>
 
+
 <a class="sticky-whatsapp"
-href="https://wa.me/201272796287?text=أرغب%20في%20الاستفادة%20من%20عرض%20كورس%20مدرب%20الحساب%20الذهني%20بسعر%20750%20جنيه">
+href="https://wa.me/201272796287?text=الاشتراك%20في%20الكورس">
 
 💬 واتساب للاشتراك
 
