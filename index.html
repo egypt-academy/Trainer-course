@@ -1,668 +1,856 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>كورس مدرب الحساب الذهني | الأكاديمية المصرية للحساب الذهني</title>
+<title>كورس مدرب الحساب الذهني | الأكاديمية المصرية للحساب الذهني</title>
 
-  <meta name="description" content="ابدأ رحلتك كمدرب حساب ذهني من البيت مع كورس مسجل، متابعة ودعم، ومحاضرة تجريبية مجانية.">
+<meta name="description" content="كورس مدرب الحساب الذهني - تعلم المجال خطوة بخطوة وابدأ العمل من البيت.">
 
-  <style>
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-    html{
-      scroll-behavior:smooth;
-    }
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:#f6f8fc;
+    color:#172033;
+    line-height:1.8;
+    padding-bottom:105px;
+}
+
+.container{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+section{
+    padding:55px 0;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#061631,#123e7c);
+    color:white;
+    text-align:center;
+    padding:55px 0 45px;
+}
+
+.badge{
+    display:inline-block;
+    background:#f3bd30;
+    color:#15213a;
+    padding:7px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+h1{
+    font-size:clamp(30px,7vw,54px);
+    line-height:1.35;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:780px;
+    margin:0 auto 24px;
+    font-size:19px;
+    color:#e7eef9;
+}
+
+.price-box{
+    display:inline-block;
+    background:white;
+    color:#10254a;
+    padding:14px 25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.price-box del{
+    color:#777;
+    font-size:18px;
+    margin-right:8px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:13px 24px;
+    border-radius:13px;
+    font-weight:bold;
+    display:inline-block;
+    box-shadow:0 6px 18px rgba(37,211,102,.25);
+}
+
+.secondary-btn{
+    color:white;
+    text-decoration:none;
+    border:2px solid white;
+    padding:11px 20px;
+    border-radius:13px;
+    font-weight:bold;
+}
+
+/* MAIN IMAGE */
+
+.hero-image{
+    background:white;
+    text-align:center;
+    padding:35px 0;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:700px;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+}
+
+/* TITLES */
+
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.section-title h2{
+    color:#0b2857;
+    font-size:clamp(26px,5vw,38px);
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#667085;
+    max-width:750px;
+    margin:auto;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.card{
+    background:white;
+    padding:25px 19px;
+    border-radius:18px;
+    box-shadow:0 7px 25px rgba(20,45,90,.08);
+}
+
+.card-icon{
+    font-size:36px;
+    margin-bottom:9px;
+}
+
+.card h3{
+    color:#102c5c;
+    margin-bottom:6px;
+}
+
+.money-card{
+    border:2px solid #f2bd31;
+    background:linear-gradient(180deg,#fffdf5,#fff);
+}
+
+.money-card h3{
+    color:#166534;
+}
+
+/* INCOME BANNER */
+
+.income-banner{
+    max-width:900px;
+    margin:28px auto 0;
+    background:linear-gradient(135deg,#0d6339,#139653);
+    color:white;
+    border-radius:18px;
+    padding:23px;
+    text-align:center;
+    box-shadow:0 10px 28px rgba(0,100,60,.16);
+}
+
+.income-banner .money{
+    font-size:40px;
+}
+
+.income-banner h3{
+    font-size:25px;
+}
+
+/* VIDEOS */
+
+.video-box{
+    background:white;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(15,40,80,.10);
+    max-width:850px;
+    margin:auto;
+}
+
+.drive-video{
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
+    overflow:hidden;
+    border-radius:14px;
+    background:#000;
+}
+
+.drive-video iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* LESSONS */
+
+.lessons{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:13px;
+    max-width:900px;
+    margin:auto;
+}
+
+.lesson{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    border-right:5px solid #e7b52d;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
+}
+
+/* OFFER */
+
+.offer{
+    background:linear-gradient(135deg,#071a3b,#123b78);
+    color:white;
+    text-align:center;
+}
+
+.offer h2{
+    font-size:36px;
+}
+
+.big-price{
+    color:#ffd54f;
+    font-size:50px;
+    font-weight:bold;
+}
+
+.offer del{
+    font-size:24px;
+    opacity:.75;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    background:white;
+    margin-bottom:12px;
+    padding:17px 20px;
+    border-radius:13px;
+    box-shadow:0 4px 18px rgba(20,40,80,.07);
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#0c2b59;
+}
+
+details p{
+    margin-top:12px;
+    color:#536174;
+}
+
+.center{
+    text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+    background:#06152f;
+    color:#dce6f6;
+    text-align:center;
+    padding:30px 15px;
+}
+
+/* FIXED OFFER BAR */
+
+.sticky-bar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    background:linear-gradient(90deg,#061631,#102f62);
+    box-shadow:0 -5px 25px rgba(0,0,0,.25);
+    padding:9px 15px;
+}
+
+.sticky-inner{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.sticky-message{
+    color:white;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    line-height:1.4;
+}
+
+.sticky-message strong{
+    color:#ffd54f;
+    font-size:21px;
+}
+
+.sticky-message del{
+    color:#ddd;
+    margin-right:5px;
+}
+
+.sticky-whatsapp{
+    white-space:nowrap;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:12px 21px;
+    border-radius:13px;
+    font-size:16px;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
 
     body{
-      font-family: Tahoma, Arial, sans-serif;
-      background:#f6f8fc;
-      color:#172033;
-      line-height:1.8;
-      padding-bottom:90px;
-    }
-
-    .container{
-      width:min(1100px,92%);
-      margin:auto;
-    }
-
-    /* الشريط الثابت */
-    .sticky-bar{
-      position:fixed;
-      bottom:0;
-      left:0;
-      right:0;
-      z-index:9999;
-      background:#081b3a;
-      padding:10px 15px;
-      box-shadow:0 -3px 20px rgba(0,0,0,.2);
-    }
-
-    .sticky-inner{
-      max-width:1000px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-    }
-
-    .sticky-price{
-      color:white;
-      font-weight:bold;
-      font-size:17px;
-    }
-
-    .old-price{
-      text-decoration:line-through;
-      opacity:.7;
-      font-size:14px;
-      margin-right:5px;
-    }
-
-    .whatsapp-btn{
-      background:#25D366;
-      color:white;
-      text-decoration:none;
-      padding:12px 22px;
-      border-radius:12px;
-      font-weight:bold;
-      display:inline-block;
-      transition:.2s;
-    }
-
-    .whatsapp-btn:hover{
-      transform:translateY(-2px);
-    }
-
-    /* الهيرو */
-    .hero{
-      background:
-        linear-gradient(135deg,rgba(5,22,54,.98),rgba(13,57,116,.94));
-      color:white;
-      padding:55px 0 45px;
-      text-align:center;
-    }
-
-    .badge{
-      display:inline-block;
-      background:#f1b92b;
-      color:#16213a;
-      padding:7px 16px;
-      border-radius:30px;
-      font-weight:bold;
-      margin-bottom:18px;
-    }
-
-    h1{
-      font-size:clamp(30px,7vw,54px);
-      line-height:1.35;
-      margin-bottom:15px;
-    }
-
-    .hero p{
-      max-width:800px;
-      margin:0 auto 25px;
-      font-size:19px;
-      color:#e7eef9;
-    }
-
-    .price-box{
-      display:inline-block;
-      background:white;
-      color:#10254a;
-      padding:15px 25px;
-      border-radius:15px;
-      margin-bottom:20px;
-      font-size:24px;
-      font-weight:bold;
-    }
-
-    .price-box del{
-      color:#777;
-      font-size:18px;
-      margin-right:10px;
-    }
-
-    .hero-buttons{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
-    .secondary-btn{
-      background:transparent;
-      border:2px solid white;
-      color:white;
-      text-decoration:none;
-      padding:11px 20px;
-      border-radius:12px;
-      font-weight:bold;
-    }
-
-    /* الصورة الرئيسية */
-    .hero-image{
-      background:white;
-      padding:35px 0;
-      text-align:center;
-    }
-
-    .hero-image img{
-      max-width:700px;
-      width:100%;
-      border-radius:18px;
-      box-shadow:0 12px 35px rgba(0,0,0,.15);
+        padding-bottom:150px;
     }
 
     section{
-      padding:55px 0;
+        padding:42px 0;
     }
 
-    .section-title{
-      text-align:center;
-      margin-bottom:30px;
-    }
-
-    .section-title h2{
-      font-size:clamp(26px,5vw,38px);
-      color:#0b2857;
-      margin-bottom:8px;
-    }
-
-    .section-title p{
-      color:#667085;
-      max-width:700px;
-      margin:auto;
-    }
-
-    /* الفيديو */
-    .video-box{
-      background:white;
-      padding:18px;
-      border-radius:20px;
-      box-shadow:0 8px 30px rgba(15,40,80,.1);
-      max-width:850px;
-      margin:auto;
-    }
-
-    video{
-      width:100%;
-      border-radius:14px;
-      background:#000;
-    }
-
-    /* المميزات */
-    .features{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-    }
-
-    .card{
-      background:white;
-      padding:24px 18px;
-      border-radius:18px;
-      box-shadow:0 7px 25px rgba(20,45,90,.08);
-    }
-
-    .card-icon{
-      font-size:34px;
-      margin-bottom:10px;
-    }
-
-    .card h3{
-      color:#102c5c;
-      margin-bottom:6px;
-    }
-
-    /* محتوى الكورس */
+    .features,
     .lessons{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:13px;
-      max-width:900px;
-      margin:auto;
-    }
-
-    .lesson{
-      background:white;
-      padding:15px;
-      border-radius:12px;
-      border-right:5px solid #e7b52d;
-      box-shadow:0 4px 15px rgba(0,0,0,.06);
-    }
-
-    /* عرض السعر */
-    .offer{
-      background:linear-gradient(135deg,#071a3b,#123b78);
-      color:white;
-      text-align:center;
-    }
-
-    .offer h2{
-      font-size:36px;
-      margin-bottom:10px;
-    }
-
-    .big-price{
-      color:#ffd54f;
-      font-size:50px;
-      font-weight:bold;
-    }
-
-    .offer del{
-      opacity:.75;
-      font-size:24px;
-    }
-
-    /* الأسئلة */
-    .faq{
-      max-width:850px;
-      margin:auto;
-    }
-
-    details{
-      background:white;
-      margin-bottom:12px;
-      padding:17px 20px;
-      border-radius:13px;
-      box-shadow:0 4px 18px rgba(20,40,80,.07);
-    }
-
-    summary{
-      cursor:pointer;
-      font-weight:bold;
-      color:#0c2b59;
-    }
-
-    details p{
-      margin-top:12px;
-      color:#536174;
-    }
-
-    .center{
-      text-align:center;
-    }
-
-    footer{
-      text-align:center;
-      padding:30px 15px;
-      background:#06152f;
-      color:#dce6f6;
-    }
-
-    @media(max-width:750px){
-      .features,
-      .lessons{
         grid-template-columns:1fr;
-      }
-
-      .sticky-inner{
-        flex-direction:column;
-      }
-
-      .sticky-bar{
-        padding:8px;
-      }
-
-      body{
-        padding-bottom:120px;
-      }
     }
-  </style>
+
+    .sticky-inner{
+        flex-direction:column;
+        gap:6px;
+    }
+
+    .sticky-message{
+        font-size:14px;
+    }
+
+    .sticky-message strong{
+        font-size:17px;
+    }
+
+    .sticky-whatsapp{
+        width:100%;
+        max-width:330px;
+        text-align:center;
+        padding:9px 15px;
+    }
+
+    .hero{
+        padding-top:40px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<!-- أول الصفحة -->
 <header class="hero">
-  <div class="container">
+<div class="container">
 
-    <span class="badge">🎓 الدبلومة المدعمة لدعم الشباب</span>
+<span class="badge">🎓 الدبلومة المدعمة لدعم الشباب</span>
 
-    <h1>
-      ابدأ رحلتك كمدرب حساب ذهني
-      <br>
-      وابنِ مشروعك من البيت
-    </h1>
+<h1>
+ابدأ رحلتك كمدرب حساب ذهني
+<br>
+وابنِ مشروعك من البيت
+</h1>
 
-    <p>
-      برنامج تدريبي مسجل يساعدك تتعلم الحساب الذهني خطوة بخطوة،
-      وتعرف إزاي تبدأ، تسوق لنفسك، وتكوّن مجموعاتك.
-    </p>
+<p>
+برنامج تدريبي مسجل يساعدك تتعلم الحساب الذهني خطوة بخطوة،
+وتعرف إزاي تبدأ وتطبق وتسوق لنفسك وتكوّن مجموعاتك.
+</p>
 
-    <div class="price-box">
-      750 جنيه
-      <del>1800 جنيه</del>
-    </div>
+<div class="price-box">
+750 جنيه
+<del>1800 جنيه</del>
+</div>
 
-    <div class="hero-buttons">
-      <a class="whatsapp-btn"
-         href="https://wa.me/201272796287?text=أرغب%20في%20الاشتراك%20في%20كورس%20مدرب%20الحساب%20الذهني">
-         تواصل واتساب للاشتراك
-      </a>
+<div class="buttons">
 
-      <a class="secondary-btn" href="#trial">
-        شاهد المحاضرة التجريبية
-      </a>
-    </div>
+<a class="whatsapp-btn"
+href="https://wa.me/201272796287?text=أرغب%20في%20الاشتراك%20في%20كورس%20مدرب%20الحساب%20الذهني">
+💬 تواصل واتساب للاشتراك
+</a>
 
-  </div>
+<a class="secondary-btn" href="#trial">
+🎥 شاهد المحاضرة التجريبية
+</a>
+
+</div>
+</div>
 </header>
 
 
-<!-- الصورة -->
 <section class="hero-image">
-  <div class="container">
+<div class="container">
 
-    <!-- ارفع الصورة على GitHub باسم hero.jpg -->
-    <img src="hero.jpg"
-         alt="كورس مدرب الحساب الذهني">
+<img src="hero.jpg" alt="كورس مدرب الحساب الذهني">
 
-  </div>
+</div>
 </section>
 
 
-<!-- لماذا الكورس -->
 <section>
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>مش مجرد كورس حساب ذهني</h2>
-      <p>
-        الهدف إنك تتعلم المجال وتعرف إزاي تحوله لمهارة عملية تقدر تشتغل بيها.
-      </p>
-    </div>
+<div class="section-title">
+<h2>مش مجرد كورس حساب ذهني</h2>
+<p>
+هتتعلم المجال وتعرف إزاي تبدأ وتحول المهارة لشغل حقيقي تقدر تطوره مع الوقت.
+</p>
+</div>
 
-    <div class="features">
+<div class="features">
 
-      <div class="card">
-        <div class="card-icon">🏠</div>
-        <h3>ادرس من البيت</h3>
-        <p>
-          المحاضرات مسجلة، تقدر تبدأ وتشاهدها في الوقت المناسب ليك.
-        </p>
-      </div>
+<div class="card">
+<div class="card-icon">🏠</div>
+<h3>ادرس من البيت</h3>
+<p>
+المحاضرات مسجلة وتقدر تتعلم في الوقت والمكان المناسبين ليك.
+</p>
+</div>
 
-      <div class="card">
-        <div class="card-icon">🎥</div>
-        <h3>10 محاضرات كاملة</h3>
-        <p>
-          من الأساسيات لحد العمليات المتقدمة وطريقة التطبيق مع الأطفال.
-        </p>
-      </div>
+<div class="card">
+<div class="card-icon">🎥</div>
+<h3>10 محاضرات كاملة</h3>
+<p>
+تدريب يبدأ معاك من الأساسيات وصولًا للعمليات المتقدمة والتطبيق.
+</p>
+</div>
 
-      <div class="card">
-        <div class="card-icon">📞</div>
-        <h3>دعم أثناء التطبيق</h3>
-        <p>
-          لو عندك استفسار أثناء التعلم والتطبيق تقدر تتواصل معانا.
-        </p>
-      </div>
+<div class="card">
+<div class="card-icon">📞</div>
+<h3>دعم أثناء التطبيق</h3>
+<p>
+تقدر تتواصل وتسأل عن أي نقطة تحتاج توضيحها أثناء رحلة التعلم.
+</p>
+</div>
 
-      <div class="card">
-        <div class="card-icon">💼</div>
-        <h3>ابدأ شغلك</h3>
-        <p>
-          هتتعلم إزاي تسوق لنفسك وتبدأ تكوّن أول مجموعاتك.
-        </p>
-      </div>
+<div class="card money-card">
+<div class="card-icon">💰</div>
+<h3>ابدأ شغلك ووسّع دخلك</h3>
+<p>
+هتتعلم إزاي تسوق لنفسك، وتكوّن أول مجموعاتك، وتحول مهارتك إلى مصدر دخل قوي.
+</p>
+</div>
 
-      <div class="card">
-        <div class="card-icon">🎓</div>
-        <h3>شهادة بعد إتمام التدريب</h3>
-        <p>
-          تحصل على شهادة من الأكاديمية المصرية للحساب الذهني بعد إتمام البرنامج.
-        </p>
-      </div>
+<div class="card">
+<div class="card-icon">🎓</div>
+<h3>شهادة بعد إتمام التدريب</h3>
+<p>
+تحصل على شهادة من الأكاديمية المصرية للحساب الذهني بعد إتمام البرنامج.
+</p>
+</div>
 
-      <div class="card">
-        <div class="card-icon">🔁</div>
-        <h3>راجع في أي وقت</h3>
-        <p>
-          تقدر ترجع لأي محاضرة وقت ما تحتاج بدون الارتباط بميعاد ثابت.
-        </p>
-      </div>
+<div class="card">
+<div class="card-icon">🔁</div>
+<h3>راجع في أي وقت</h3>
+<p>
+تقدر ترجع للمحاضرات وقت ما تحتاج بدون الارتباط بموعد ثابت.
+</p>
+</div>
 
-    </div>
-  </div>
+</div>
+
+<div class="income-banner">
+
+<div class="money">💰</div>
+
+<h3>
+حوّل مهارتك لمصدر دخل قوي
+</h3>
+
+<p>
+ومع بناء مجموعاتك والتسويق الجيد لنفسك، المجال يفتح لك فرصة لزيادة دخلك
+والوصول لنتائج قد تتجاوز دخل الدروس الخصوصية.
+</p>
+
+</div>
+
+</div>
 </section>
 
 
-<!-- المحاضرة التجريبية -->
 <section id="trial" style="background:#eef3fa;">
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>🎥 شوف بنفسك قبل ما تقرر</h2>
-      <p>
-        شاهد جزء من التدريب وتعرّف على طريقة الشرح داخل الكورس قبل الاشتراك.
-      </p>
-    </div>
+<div class="section-title">
 
-    <div class="video-box">
+<h2>🎥 شوف بنفسك قبل ما تقرر</h2>
 
-      <!-- ارفع الفيديو على GitHub باسم trial.mp4 -->
-      <video controls preload="metadata">
-        <source src="trial.mp4" type="video/mp4">
-        المتصفح لا يدعم تشغيل الفيديو.
-      </video>
+<p>
+دي محاضرة تجريبية من داخل الكورس.
+شاهد طريقة الشرح والتدريب بنفسك قبل الاشتراك.
+</p>
 
-    </div>
+</div>
 
-    <br>
+<div class="video-box">
 
-    <div class="center">
-      <a class="whatsapp-btn"
-         href="https://wa.me/201272796287?text=شاهدت%20المحاضرة%20التجريبية%20وأرغب%20في%20معرفة%20طريقة%20الاشتراك">
-        أعجبتني المحاضرة — أريد الاشتراك
-      </a>
-    </div>
+<div class="drive-video">
 
-  </div>
+<iframe
+src="https://drive.google.com/file/d/17X0TXtEsJTAfZHYA29hIqbidTujQ4vUi/preview"
+allow="autoplay"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+<br>
+
+<div class="center">
+
+<a class="whatsapp-btn"
+href="https://wa.me/201272796287?text=شاهدت%20المحاضرة%20التجريبية%20وأرغب%20في%20معرفة%20طريقة%20الاشتراك">
+❤️ أعجبتني المحاضرة — أريد الاشتراك
+</a>
+
+</div>
+
+</div>
 </section>
 
 
-<!-- آراء العملاء -->
 <section>
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>⭐ شوف تجارب ناس سبقوك</h2>
-      <p>
-        آراء بعض المتدربين السابقين في التدريب وتجربتهم مع الأكاديمية.
-      </p>
-    </div>
+<div class="section-title">
 
-    <div class="video-box">
+<h2>⭐ شوف تجارب ناس سبقوك</h2>
 
-      <!-- ارفع الفيديو باسم reviews.mp4 -->
-      <video controls preload="metadata">
-        <source src="reviews.mp4" type="video/mp4">
-        المتصفح لا يدعم تشغيل الفيديو.
-      </video>
+<p>
+حابب أوريك تجارب ناس كانوا مترددين في البداية،
+وبعد التدريب بدأوا يطبقوا ويحققوا نتائج من المجال.
+<br>
+ودي آراء بعض المتدربين السابقين بنفسهم ❤️
+</p>
 
-    </div>
+</div>
 
-  </div>
+<div class="video-box">
+
+<div class="drive-video">
+
+<iframe
+src="https://drive.google.com/file/d/17umx2YTJtiCzcosHchJ8YEv98eK3-4sm/preview"
+allow="autoplay"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+<br>
+
+<div class="center">
+
+<a class="whatsapp-btn"
+href="https://wa.me/201272796287?text=شاهدت%20آراء%20المتدربين%20وأرغب%20في%20الاشتراك">
+💬 أعرف طريقة الاشتراك
+</a>
+
+</div>
+
+</div>
 </section>
 
 
-<!-- المحتوى -->
 <section style="background:#eef3fa;">
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>📚 محتوى البرنامج التدريبي</h2>
-      <p>
-        البرنامج مكوّن من 10 محاضرات مسجلة تقدر تشوفها في الوقت المناسب ليك.
-      </p>
-    </div>
+<div class="section-title">
 
-    <div class="lessons">
+<h2>📚 محتوى البرنامج التدريبي</h2>
 
-      <div class="lesson">1️⃣ الجمع والطرح البسيط</div>
-      <div class="lesson">2️⃣ أصدقاء الـ 5</div>
-      <div class="lesson">3️⃣ أصدقاء الـ 10</div>
-      <div class="lesson">4️⃣ الجمع والطرح حتى الملايين</div>
-      <div class="lesson">5️⃣ الضرب البسيط</div>
-      <div class="lesson">6️⃣ الضرب المركب</div>
-      <div class="lesson">7️⃣ القسمة</div>
+<p>
+10 محاضرات مسجلة تقدر تتعلم منها خطوة بخطوة.
+</p>
 
-      <div class="lesson">
-        8️⃣ التخيل وإدارة الفصل والمستويات وتحويل البرنامج للإنجليزية
-      </div>
+</div>
 
-      <div class="lesson">
-        9️⃣ البدء والتسويق وتكوين أول المجموعات
-      </div>
+<div class="lessons">
 
-      <div class="lesson">
-        🔟 العمليات الحسابية المتقدمة
-      </div>
+<div class="lesson">1️⃣ الجمع والطرح البسيط</div>
 
-    </div>
+<div class="lesson">2️⃣ أصدقاء الـ5</div>
 
-  </div>
+<div class="lesson">3️⃣ أصدقاء الـ10</div>
+
+<div class="lesson">4️⃣ الجمع والطرح حتى الملايين</div>
+
+<div class="lesson">5️⃣ الضرب البسيط</div>
+
+<div class="lesson">6️⃣ الضرب المركب</div>
+
+<div class="lesson">7️⃣ القسمة</div>
+
+<div class="lesson">
+8️⃣ التخيل وإدارة الفصل والمستويات وتحويل البرنامج للإنجليزية
+</div>
+
+<div class="lesson">
+9️⃣ البدء والتسويق وتكوين أول المجموعات
+</div>
+
+<div class="lesson">
+🔟 العمليات الحسابية المتقدمة
+</div>
+
+</div>
+
+</div>
 </section>
 
 
-<!-- العرض -->
 <section class="offer">
-  <div class="container">
+<div class="container">
 
-    <h2>🔥 العرض الحالي</h2>
+<h2>🔥 استفيد من العرض الحالي</h2>
 
-    <p>بدل</p>
-    <del>1800 جنيه</del>
+<p>بدل</p>
 
-    <div class="big-price">
-      750 جنيه فقط
-    </div>
+<del>1800 جنيه</del>
 
-    <p style="margin:15px auto 25px;max-width:600px;">
-      تقدر تشترك بالسعر الحالي وتبدأ مشاهدة الكورس
-      في الوقت المناسب ليك لأن جميع المحاضرات مسجلة.
-    </p>
+<div class="big-price">
+750 جنيه فقط
+</div>
 
-    <a class="whatsapp-btn"
-       href="https://wa.me/201272796287?text=أرغب%20في%20حجز%20كورس%20مدرب%20الحساب%20الذهني%20بسعر%20750%20جنيه">
-       احجز اشتراكك الآن
-    </a>
+<p style="margin:15px auto 25px;max-width:650px;">
 
-  </div>
+مش لازم تبدأ الكورس فور الاشتراك.
+تقدر تستفيد بالسعر الحالي وتبدأ مشاهدة المحاضرات في الوقت المناسب ليك.
+
+</p>
+
+<a class="whatsapp-btn"
+href="https://wa.me/201272796287?text=أرغب%20في%20حجز%20كورس%20مدرب%20الحساب%20الذهني%20بسعر%20750%20جنيه">
+
+💬 احجز اشتراكك الآن
+
+</a>
+
+</div>
 </section>
 
 
-<!-- الأسئلة الشائعة -->
 <section>
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>❓ الأسئلة الشائعة</h2>
-    </div>
+<div class="section-title">
+<h2>❓ الأسئلة الشائعة</h2>
+</div>
 
-    <div class="faq">
+<div class="faq">
 
-      <details>
-        <summary>هل لازم يكون عندي خبرة سابقة؟</summary>
-        <p>
-          لا، البرنامج يبدأ من الأساسيات ومناسب للمبتدئين.
-        </p>
-      </details>
+<details>
 
-      <details>
-        <summary>هل الكورس مباشر ولا مسجل؟</summary>
-        <p>
-          الكورس عبارة عن محاضرات مسجلة، وبالتالي تقدر تشوفها في أي وقت مناسب ليك.
-        </p>
-      </details>
+<summary>
+هل لازم يكون عندي خبرة سابقة؟
+</summary>
 
-      <details>
-        <summary>هل أقدر أرجع للمحاضرات بعد ما أشوفها؟</summary>
-        <p>
-          نعم، تقدر ترجع للمحتوى في أي وقت تحتاجه.
-        </p>
-      </details>
+<p>
+لا، البرنامج يبدأ من الأساسيات ومناسب للمبتدئين.
+</p>
 
-      <details>
-        <summary>هل يوجد دعم أثناء التدريب؟</summary>
-        <p>
-          نعم، يوجد دعم للإجابة عن الاستفسارات أثناء التطبيق.
-        </p>
-      </details>
+</details>
 
-      <details>
-        <summary>هل لازم أبدأ فور الاشتراك؟</summary>
-        <p>
-          لا. تقدر تشترك وتستفيد بالسعر الحالي ثم تبدأ في الوقت المناسب ليك.
-        </p>
-      </details>
 
-      <details>
-        <summary>ما سعر الكورس الحالي؟</summary>
-        <p>
-          العرض الحالي 750 جنيه بدل 1800 جنيه.
-        </p>
-      </details>
+<details>
 
-    </div>
+<summary>
+هل الكورس مباشر ولا مسجل؟
+</summary>
 
-  </div>
+<p>
+الكورس عبارة عن محاضرات مسجلة، وبالتالي تقدر تشوفها في أي وقت مناسب ليك.
+
+وكمان تقدر تتواصل مع المدرب في أي وقت أثناء أو بعد الكورس عن طريق زر التواصل مع المدرب، وبكده مش هتحتاج ترتبط بوقت أو مكان معين علشان تبدأ.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+هل أقدر أرجع للمحاضرات بعد ما أشوفها؟
+</summary>
+
+<p>
+نعم، تقدر ترجع للمحتوى والمحاضرات وقت ما تحتاج.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+هل يوجد دعم أثناء التدريب؟
+</summary>
+
+<p>
+نعم، تقدر تتواصل وتسأل عن أي استفسار أثناء التعلم والتطبيق.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+هل لازم أبدأ فور الاشتراك؟
+</summary>
+
+<p>
+لا. تقدر تستفيد بالعرض الحالي، وبعد الاشتراك تبدأ في الوقت المناسب ليك لأن المحاضرات مسجلة.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+ما سعر الكورس الحالي؟
+</summary>
+
+<p>
+السعر الحالي 750 جنيه بدل 1800 جنيه.
+</p>
+
+</details>
+
+</div>
+
+</div>
 </section>
 
 
-<!-- النهاية -->
 <section style="background:white;">
-  <div class="container center">
+<div class="container center">
 
-    <div class="section-title">
-      <h2>جاهز تبدأ رحلتك؟ ❤️</h2>
-      <p>
-        لو عندك أي سؤال أو عايز تحجز بالسعر الحالي، تواصل معانا مباشرة.
-      </p>
-    </div>
+<div class="section-title">
 
-    <a class="whatsapp-btn"
-       href="https://wa.me/201272796287?text=أرغب%20في%20معرفة%20تفاصيل%20الاشتراك%20في%20كورس%20مدرب%20الحساب%20الذهني">
-       تواصل معنا على واتساب
-    </a>
+<h2>جاهز تبدأ رحلتك؟ ❤️</h2>
 
-  </div>
+<p>
+لو حابب تبدأ أو عندك أي استفسار، تواصل معانا مباشرة على واتساب.
+</p>
+
+</div>
+
+<a class="whatsapp-btn"
+href="https://wa.me/201272796287?text=أرغب%20في%20معرفة%20تفاصيل%20الاشتراك%20في%20كورس%20مدرب%20الحساب%20الذهني">
+
+💬 تواصل معنا على واتساب
+
+</a>
+
+</div>
 </section>
 
 
 <footer>
-  الأكاديمية المصرية للحساب الذهني
-  <br>
-  جميع الحقوق محفوظة
+
+الأكاديمية المصرية للحساب الذهني
+<br>
+جميع الحقوق محفوظة
+
 </footer>
 
 
-<!-- شريط واتساب الثابت -->
 <div class="sticky-bar">
 
-  <div class="sticky-inner">
+<div class="sticky-inner">
 
-    <div class="sticky-price">
-      🔥 750 جنيه
-      <span class="old-price">1800 جنيه</span>
-    </div>
+<div class="sticky-message">
 
-    <a class="whatsapp-btn"
-       href="https://wa.me/201272796287?text=أرغب%20في%20الاشتراك%20في%20كورس%20مدرب%20الحساب%20الذهني">
-       واتساب للاشتراك
-    </a>
+🔥 احصل على العرض قبل الانتهاء
+<br>
 
-  </div>
+<strong>750 جنيه فقط</strong>
 
+بدلًا من
+
+<del>1800 جنيه</del>
+
+</div>
+
+<a class="sticky-whatsapp"
+href="https://wa.me/201272796287?text=أرغب%20في%20الاستفادة%20من%20عرض%20كورس%20مدرب%20الحساب%20الذهني%20بسعر%20750%20جنيه">
+
+💬 واتساب للاشتراك
+
+</a>
+
+</div>
 </div>
 
 </body>
